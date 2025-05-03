@@ -1,0 +1,748 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "BNLR.API_COTIZADOR",
+    "version": "1.2025.4"
+  },
+  "paths": {
+    "/api/Corredores/ObtenerCorredor": {
+      "post": {
+        "tags": [
+          "Corredores"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BuscarCorredor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BuscarCorredor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BuscarCorredor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Corredores/ObtenerListaCorredores": {
+      "post": {
+        "tags": [
+          "Corredores"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BuscarCorredores"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BuscarCorredores"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BuscarCorredores"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Corredores/GuardarCorredor": {
+      "post": {
+        "tags": [
+          "Corredores"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CORREDORESVM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CORREDORESVM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CORREDORESVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Corredores/EliminarCorredor": {
+      "post": {
+        "tags": [
+          "Corredores"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BuscarCorredor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BuscarCorredor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BuscarCorredor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Corredores/ObtenerDominiosFormularioCorredor": {
+      "get": {
+        "tags": [
+          "Corredores"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Corredores/InsertarSancionCorredor": {
+      "post": {
+        "tags": [
+          "Corredores"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NuevaSancionCorredor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NuevaSancionCorredor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NuevaSancionCorredor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Corredores/EliminarSancionCorredor": {
+      "post": {
+        "tags": [
+          "Corredores"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EliminarSancionCorredor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EliminarSancionCorredor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EliminarSancionCorredor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Corredores/ObtenerListaSancionesCorredor": {
+      "post": {
+        "tags": [
+          "Corredores"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObtenerSancionesCorredor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObtenerSancionesCorredor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObtenerSancionesCorredor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/FiltrosCotizacion/CargarFormularioFiltrosCotizacion": {
+      "get": {
+        "tags": [
+          "FiltrosCotizacion"
+        ],
+        "parameters": [
+          {
+            "name": "bActivaLog3",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/FiltrosCotizacion/GuardarFormularioFiltrosCotizacion": {
+      "post": {
+        "tags": [
+          "FiltrosCotizacion"
+        ],
+        "parameters": [
+          {
+            "name": "bActivaLog3",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParametrosFiltrosCotizacion"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParametrosFiltrosCotizacion"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParametrosFiltrosCotizacion"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TiposCorredor/ObtenerTiposCorredor": {
+      "get": {
+        "tags": [
+          "TiposCorredor"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TiposCorredor/ActualizarGastoAdicionalTiposCorredor": {
+      "post": {
+        "tags": [
+          "TiposCorredor"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ActualizarGastoAdicionalTipoCorredor"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ActualizarGastoAdicionalTipoCorredor"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ActualizarGastoAdicionalTipoCorredor"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ActualizarGastoAdicionalTipoCorredor": {
+        "type": "object",
+        "properties": {
+          "TipoCorredor": {
+            "type": "string",
+            "nullable": true
+          },
+          "GastoAdicional": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BuscarCorredor": {
+        "type": "object",
+        "properties": {
+          "RutCorredor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BuscarCorredores": {
+        "type": "object",
+        "properties": {
+          "RutCorredor": {
+            "type": "string",
+            "nullable": true
+          },
+          "NombreCorredor": {
+            "type": "string",
+            "nullable": true
+          },
+          "CodigoCorredor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CORREDORESVM": {
+        "type": "object",
+        "properties": {
+          "RUT_CORREDOR": {
+            "type": "string",
+            "nullable": true
+          },
+          "CIRCULAR_SANCION": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "CORREDOR": {
+            "type": "string",
+            "nullable": true
+          },
+          "DESCRIPCION": {
+            "type": "string",
+            "nullable": true
+          },
+          "SUCURSAL": {
+            "type": "string",
+            "nullable": true
+          },
+          "TIPO_CORREDOR": {
+            "type": "string",
+            "nullable": true
+          },
+          "RUT_PRODUCTOR": {
+            "type": "string",
+            "nullable": true
+          },
+          "DIRECCION1": {
+            "type": "string",
+            "nullable": true
+          },
+          "DIRECCION2": {
+            "type": "string",
+            "nullable": true
+          },
+          "DIRECCION3": {
+            "type": "string",
+            "nullable": true
+          },
+          "COMUNA": {
+            "type": "string",
+            "nullable": true
+          },
+          "CIUDAD": {
+            "type": "string",
+            "nullable": true
+          },
+          "REGION": {
+            "type": "string",
+            "nullable": true
+          },
+          "TELEFONO": {
+            "type": "string",
+            "nullable": true
+          },
+          "FAX": {
+            "type": "string",
+            "nullable": true
+          },
+          "CONTACTO": {
+            "type": "string",
+            "nullable": true
+          },
+          "CLASIFICACION_CORREDOR": {
+            "type": "string",
+            "nullable": true
+          },
+          "PORCENTAJE_COMISION": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "GASTO_ADICIONAL": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "PORCENTAJE_ANTICIPO": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "DOCUMENTO_COBRO": {
+            "type": "string",
+            "nullable": true
+          },
+          "POLIZA_GARANTIA": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FECHA_INICIO_POLIZA": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "FECHA_TERMINO_POLIZA": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "EMISOR_POLIZA": {
+            "type": "string",
+            "nullable": true
+          },
+          "CIRCULAR_APROBACION": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FECHA_CIRCULAR": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "PORCENTAJE_COMISION_PRIVADAS": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "GASTO_ADICIONAL_PRIVADAS": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "TIPO_PERSONA": {
+            "type": "string",
+            "nullable": true
+          },
+          "TIPO_INTERMEDIARIO": {
+            "type": "string",
+            "nullable": true
+          },
+          "ZONA": {
+            "type": "string",
+            "nullable": true
+          },
+          "AGENCIA": {
+            "type": "string",
+            "nullable": true
+          },
+          "CATEGORIA_CORREDOR": {
+            "type": "string",
+            "nullable": true
+          },
+          "FECHA_ACTUALIZACION": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "NOMBRE": {
+            "type": "string",
+            "nullable": true
+          },
+          "APELLIDO_PATERNO": {
+            "type": "string",
+            "nullable": true
+          },
+          "APELLIDO_MATERNO": {
+            "type": "string",
+            "nullable": true
+          },
+          "FECHA_TRASPASO_ASESOR": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EliminarSancionCorredor": {
+        "type": "object",
+        "properties": {
+          "RutCorredor": {
+            "type": "string",
+            "nullable": true
+          },
+          "Circular": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NuevaSancionCorredor": {
+        "type": "object",
+        "properties": {
+          "RutCorredor": {
+            "type": "string",
+            "nullable": true
+          },
+          "Circular": {
+            "type": "string",
+            "nullable": true
+          },
+          "FechaCircular": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "FechaInicioSancion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "FechaTerminoSancion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "FechaIngreso": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObtenerSancionesCorredor": {
+        "type": "object",
+        "properties": {
+          "RutCorredor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ParametrosFiltrosCotizacion": {
+        "type": "object",
+        "properties": {
+          "chkEdadCausante": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "chkEdadBeneficiario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "chkMesesDiferido": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "chkPrima": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "chkRentasTemporales": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "edadMaximoCausante": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "edadMinimoCausante": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "edadMaximoBeneficiario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "edadMinimoBeneficiario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mesesDiferidoMaximo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mesesDiferidoMinimo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "primaMaxima": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "primaMinima": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "TemperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TemperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "Summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
